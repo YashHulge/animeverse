@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animeverse</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style>
+    #grid {
+      border: 1px solid;
+    }
+
+   /* Update your <style> tag with this */
+.anime-grid {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.anime-card {
+  background-color: transparent;
+  border: none;
+}
+
+/* Wrapper to keep the zoom effect inside the poster bounds */
+.img-wrapper {
+  overflow: hidden;
+  border-radius: 8px; /* Optional: gives the posters nice rounded corners */
+}
+
+.anime-card img {
+  width: 100%;
+  height: 450px; /* Locks the height so all posters align perfectly */
+  object-fit: cover; /* Prevents the image from stretching/squishing */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.anime-card img:hover {
+  transform: scale(1.1);
+}
+
+  </style>
+</head>
+
+<body class="bg-dark text-white">
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Animeverse</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Animeverse</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Anime</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Help</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"></a>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://wallpapercave.com/wp/wp5085173.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://images2.alphacoders.com/138/thumb-1920-1383626.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://4kwallpapers.com/images/wallpapers/jujutsu-kaisen-3840x2160-19746.jpg" class="d-block w-100"
+            alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+<div class="container anime-grid">
+  <h3 class="text-center p-4">---Popular Series & Movies---</h3>
+  <div class="row g-4 justify-content-center">
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card anime-card">
+        <div class="img-wrapper">
+          <img src="https://m.media-amazon.com/images/I/91xEP5+wQZL._AC_UF894,1000_QL80_.jpg" class="card-img-top" alt="Your Name">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card anime-card">
+        <div class="img-wrapper">
+          <img src="https://cdn11.bigcommerce.com/s-nq6l4syi/images/stencil/1280x1280/products/143308/532935/189556-1024__61237.1664343060.jpg?c=2?imbypass=on" class="card-img-top" alt="The God of High School">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card anime-card">
+        <div class="img-wrapper">
+          <img src="https://m.media-amazon.com/images/I/61QWwus6ejL._AC_UF894,1000_QL80_.jpg" class="card-img-top" alt="Hunter x Hunter">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card anime-card">
+        <div class="img-wrapper">
+          <img src="https://www.posterswholesale.com/shared/images/product/55141-One-Piece-Crew.jpg" class="card-img-top" alt="One Piece">
+        </div>
+      </div>
+    </div>
+
+    
+
+    </div>
+</div>
+
+
+<div class="container anime-grid">
+  <div class="row g-4 justify-content-center">
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card anime-card">
+        <div class="img-wrapper">
+          <img src="https://m.media-amazon.com/images/I/71cFCD5GmyL.jpg" class="card-img-top" alt="Your Name">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card anime-card">
+        <div class="img-wrapper">
+          <img src="https://imgc.allpostersimages.com/img/posters/trends-international-fullmetal-alchemist-brotherhood-key-art-5_u-L-FAAQLU0.jpg" class="card-img-top" alt="The God of High School">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card anime-card">
+        <div class="img-wrapper">
+          <img src="https://m.media-amazon.com/images/I/81bEewqDHaL._AC_UF1000,1000_QL80_.jpg" class="card-img-top" alt="Hunter x Hunter">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card anime-card">
+        <div class="img-wrapper">
+          <img src="https://xonomax.com/cdn/shop/files/750125.jpg?v=1721568110" class="card-img-top" alt="One Piece">
+        </div>
+      </div>
+    </div>
+
+    
+
+    </div>
+</div>
+
+<div class="container anime-grid">
+  <div class="row g-4 justify-content-center">
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card anime-card">
+        <div class="img-wrapper">
+          <img src="https://files.ekmcdn.com/allwallpapers/images/my-hero-academia-characters-61x91-5cm-manga-anime-poster-new-sealed-38818-1-p.jpg" class="card-img-top" alt="Your Name">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card anime-card">
+        <div class="img-wrapper">
+          <img src="https://vystava.co.uk/cdn/shop/files/gpe5813-jpg.jpg?v=1770990198&width=533" class="card-img-top" alt="The God of High School">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card anime-card">
+        <div class="img-wrapper">
+          <img src="https://rukmini1.flixcart.com/image/1500/1500/kyt0ya80/poster/b/q/c/medium-naruto-shippuden-anime-series-matte-finish-poster-original-imagaybnfpcwehhs.jpeg?q=70" class="card-img-top" alt="Hunter x Hunter">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="card anime-card">
+        <div class="img-wrapper">
+          <img src="https://www.arthipo.com/image/cache/catalog/poster/anime/1898-2381/anime2014-fairy-tail-poster-4-779x1100.webp" class="card-img-top" alt="One Piece">
+        </div>
+      </div>
+      </div>
+
+      
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item"><a class="page-link bg-dark" href="#">Previous</a></li>
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link bg-dark" href="#">2</a></li>
+    <li class="page-item"><a class="page-link bg-dark" href="#">3</a></li>
+    <li class="page-item"><a class="page-link bg-dark" href="#">Next</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+ <div class="container">
+  <h3 class="text-center p-5">---Contact Us---</h3>
+  <div class="row">
+    <div class="col">
+      <img height="300px" width="100%" src="https://sm.ign.com/t/ign_in/feature/t/the-top-25/the-top-25-greatest-anime-characters-of-all-time_3jn9.1280.jpg" alt="">
+    </div>
+    <div class="col">
+      <form action="">
+         <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Name: </label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Name">
+</div>
+        <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">FeedBack</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+<button type="button"  class="btn btn-success" style="margin-left: 45%;">Submit</button>
+      </form>
+    </div>
+  </div>
+ </div>
+
+    <div class="text-center m-5 text-white">
+      <a href="#" class="nav-link mb-2 hov" style="font-size: 40px;"><i class="bi bi-arrow-up-circle"></i></a>
+
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">A-Z List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Most Watch</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Recently Added</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Upcoming</a>
+        </li>
+
+      </ul>
+
+     
+ 
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Animeverse</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        This Feature Comming Soon !!!!
+      </div>
+      
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
